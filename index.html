@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="layout">
+        <nav id="navbar">
+            <header>JavaScript</header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+                <li><a href="#Prerequisites" class="nav-link">Prerequisites</a></li>
+                <li><a href="#Variables" class="nav-link">Variables</a></li>
+                <li><a href="#Variable_Scope" class="nav-link">Variable Scope</a></li>
+                <li><a href="#Function_Declaration" class="nav-link">Function Declaration</a></li>
+                <li><a href="#If_/_else" class="nav-link">If / else</a></li>
+                <li><a href="#While" class="nav-link">While</a></li>
+                <li><a href="#For" class="nav-link">For</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                <p>
+                    JavaScript is a lightweight, interpreted, or just in time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it.
+                </p>
+                <p>
+                    JavaScript is a scripting or programming language that allows you to implement complex features on web pages. Every time a web page does more than just sit there and display static information for you to look at, displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. You can bet that JavaScript is probably involved.
+                </p>
+            </section>
+            <section id="Prerequisites" class="main-section">
+                <header>Prerequisites</header>
+                <p>
+                    This guide assumes you have the following knowledge:
+                </p>
+                <ul>
+                    <li>
+                        A general understanding of the Internet and the World Wide Web (WWW).
+                    </li>
+                    <li>
+                        Good knowledge of Hyper Text Markup Language (HTML).
+                    </li>
+                    <li>
+                        Good knowledge of Cascade Style Sheets (CSS).
+                    </li>
+                    <li>
+                        Some programming knowledge, whether is JavaScript or another programming language.
+                    </li>
+                    <li>
+                        A laptop or desktop computer is advised.
+                    </li>
+                </ul>
+            </section>
+            <section id="Variables" class="main-section">
+                <header>Variables</header>
+                <p>Let's get started with variables in JavaScript. To declare a variable in JavaScript you can use one of three keywords: var, let and const. Let's see an example of those.</p>
+                <div class="code-container">
+                    <code><span class="keyword">var</span> randomNumber = Math.<span class="method">floor</span>(Math.<span class="method">random</span>() * <span class="number">100</span>) + <span class="number">1</span>;</code>
+                    <code><span class="keyword">let</span> guessCount = <span class="number">1</span>;</code>
+                    <code><span class="keyword">const</span> guesses = document.<span class="method">querySelector</span>(<span class="string">'.guesses'</span>);</code>
+                </div>
+                <p>This section of the code sets up the variables and constants we need to store the data our program will use. Variables are basically containers for values (such as numbers, or strings of text). You create a variable with the keyword let (or var) followed by a name for your variable (you'll read more about the difference between the keywords later).</p>
+            </section>
+            <section id="Variable_Scope" class="main-section">
+                <header>Variable Scope</header>
+                <p>In JavaScript there are two types of scope:</p>
+                <ul>
+                    <li>Local Scope</li>
+                    <li>Global Scope</li>
+                </ul>
+                <p>The scope determines the visibility of the variables.</p>
+                <h2>Var</h2>
+                <p>The scope is global when a var variable is declared outside a function. This means that any variable that is declared with var outside a function block is available for use in the whole window.</p>
+                <p>var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.</p>
+                <h2>Let</h2>
+                <p>Let is blocked scoped. A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is a block.</p>
+                <p>So a variable declared in a block with let  is only available for use within that block.</p>
+                <h2>Const</h2>
+                <p>Variables declared with the const maintain constant values. const declarations share some similarities with let declarations. const declarations are blocked scope. const cannot be updated or re-declared.</p>
+            </section>
+            <section id="Function_Declaration" class="main-section">
+                <header>Function Declaration</header>
+                <p>The function declaration also known as function statement defines a function with the specified parameters.</p>
+                <div class="code-container">
+                    <code><span class="keyword">function</span> calcRectArea(width, height) {</code>
+                    <code><span class="keyword identation">return width</span> * <span class="keyword">height</span>;</code>
+                    <code>}</code>
+                    <code>console.<span class="method">log</span>(calcRectArea(<span class="number">5</span>, <span class="number">6</span>));</code>
+                    <code><span class="string">// expected output: 30</span></code>
+                </div>
+            </section>
+            <section id="If_/_else" class="main-section">
+                <header>If / else</header>
+                <p>The if statement executes a statement if a specified condition is truthy. If the condition is falsy, another statement can be executed.</p>
+                <div class="code-container">
+                    <code><span>function</span> testNum(a) {</code>
+                    <code><span class="identation keyword">let</span> result;</code>
+                    <code><span class="identation keyword">if </span>(<span class="keyword">a</span> > <span class="number">0</span> {</code>
+                    <code><span class="keyword identation-2">result</span> = <span class="string">'positive'</span>;</code>
+                    <code><span class="identation">}</span> <span class="keyword">else</span> {</code>
+                    <code><span class="identation-2 keyword">result</span> = <span class="string">'NOT positive'</span>;</code>    
+                    <code><span class="identation-2 keyword"> return result</span>;</code>
+                    <code><span class="identation">}</span></code>
+                    <code>}</code>
+                    <code>console.<span class="method">log</span>(testNum(<span class="number">-5</span>));</code>
+                    <code><span class="string">// expected output: "NOT positive"</span></code>
+                </div>
+            </section>
+            <section id="While" class="main-section">
+                <header>While</header>
+                <p>The while statement creates a loop that executes a specified statement as long as the test condition evaluates to true. The condition is evaluated before executing the statement.</p>
+                <div class="code-container">
+                    <code><span class="keyword">let</span> n = <span class="number">0</span>;</code>
+                    <code><span class="keyword">while</span> (n &lt;  <span class="number">3</span>) {</code>
+                    <code><span class="identation">n++;</span></code>
+                    <code>}</code>
+                    <code>console.<span class="method">log</span>(n);</code>
+                    <code><span class="string">// expected output: 3</span></code>
+                </div>
+            </section>
+            <section id="For" class="main-section">
+                <header>For</header>
+                <p>The for statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop.</p>
+                <div class="code-container">
+                    <code><span class="keyword">let</span> str = <span class="string">' '</span>;</code>
+                    <code><span class="keyword">for </span>(<span class="keyword"> let</span> i = <span class="number">0</span>; i &lt; <span class="number"> 9</span>; i++) {</code>
+                    <code><span class="identation">str = str + i;</span></code>
+                    <code>}</code>
+                    <code>console.<span class="method">log</span>(str);</code>
+                    <code><span class="string">// expected output: "0123456789"</span></code>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
